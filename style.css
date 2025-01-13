@@ -1,0 +1,41 @@
+/* Định dạng toàn trang */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+}
+
+/* Hình ảnh Capybara */
+.capybara {
+    position: absolute;
+    bottom: 0;
+    width: 150px;
+    animation: walk 10s linear infinite;
+    cursor: pointer;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.2));
+    transition: transform 0.3s ease-out;
+}
+
+/* Hiệu ứng nhảy khi click */
+.capybara.jump {
+    animation: walk 10s linear infinite; /* Giữ lại animation sau khi nhảy */
+    transform: translateY(-50px);
+    animation-play-state: paused; /* Tạm dừng khi nhảy */
+}
+
+/* Chuyển động đi qua màn hình */
+@keyframes walk {
+    0% { left: -150px; }
+    100% { left: 100vw; }
+}
+
+/* Tiêu đề */
+h1 {
+    font-family: 'Comic Sans MS', cursive;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
